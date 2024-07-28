@@ -5,4 +5,4 @@ while read line; do
   value="${rest#* }"
   echo gsettings set "$schema" "$key" "$value"
   gsettings set "$schema" "$key" "$value"
-done < settings.txt
+done < all_settings.txt

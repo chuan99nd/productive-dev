@@ -233,11 +233,11 @@ org.gnome.SessionManager logout-prompt true
 org.gnome.SessionManager show-fallback-warning true
 org.gnome.Terminal.Legacy.Settings confirm-close true
 org.gnome.Terminal.Legacy.Settings context-info ['numbers']
-org.gnome.Terminal.Legacy.Settings default-show-menubar true
+org.gnome.Terminal.Legacy.Settings default-show-menubar false
 org.gnome.Terminal.Legacy.Settings headerbar @mb false
 org.gnome.Terminal.Legacy.Settings menu-accelerator-enabled true
 org.gnome.Terminal.Legacy.Settings mnemonics-enabled false
-org.gnome.Terminal.Legacy.Settings new-tab-position 'last'
+org.gnome.Terminal.Legacy.Settings new-tab-position 'next'
 org.gnome.Terminal.Legacy.Settings new-terminal-mode 'window'
 org.gnome.Terminal.Legacy.Settings schema-version uint32 3
 org.gnome.Terminal.Legacy.Settings shell-integration-enabled true
@@ -246,27 +246,27 @@ org.gnome.Terminal.Legacy.Settings tab-policy 'automatic'
 org.gnome.Terminal.Legacy.Settings tab-position 'top'
 org.gnome.Terminal.Legacy.Settings theme-variant 'light'
 org.gnome.Terminal.Legacy.Settings unified-menu false
-org.gnome.Terminal.Legacy.Keybindings close-tab '<Control><Shift>w'
-org.gnome.Terminal.Legacy.Keybindings close-window '<Control><Shift>q'
+org.gnome.Terminal.Legacy.Keybindings close-tab '<Primary>w'
+org.gnome.Terminal.Legacy.Keybindings close-window '<Primary>q'
 org.gnome.Terminal.Legacy.Keybindings copy '<Control><Shift>c'
 org.gnome.Terminal.Legacy.Keybindings copy-html 'disabled'
 org.gnome.Terminal.Legacy.Keybindings detach-tab 'disabled'
 org.gnome.Terminal.Legacy.Keybindings export 'disabled'
 org.gnome.Terminal.Legacy.Keybindings find '<Control><Shift>F'
-org.gnome.Terminal.Legacy.Keybindings find-clear '<Control><Shift>J'
+org.gnome.Terminal.Legacy.Keybindings find-clear '<Primary><Shift>m'
 org.gnome.Terminal.Legacy.Keybindings find-next '<Control><Shift>G'
 org.gnome.Terminal.Legacy.Keybindings find-previous '<Control><Shift>H'
 org.gnome.Terminal.Legacy.Keybindings full-screen 'F11'
-org.gnome.Terminal.Legacy.Keybindings header-menu 'disabled'
+org.gnome.Terminal.Legacy.Keybindings header-menu '<Primary>m'
 org.gnome.Terminal.Legacy.Keybindings help 'disabled'
-org.gnome.Terminal.Legacy.Keybindings move-tab-left '<Control><Shift>Page_Up'
-org.gnome.Terminal.Legacy.Keybindings move-tab-right '<Control><Shift>Page_Down'
-org.gnome.Terminal.Legacy.Keybindings new-tab '<Control><Shift>t'
-org.gnome.Terminal.Legacy.Keybindings new-window '<Control><Shift>n'
-org.gnome.Terminal.Legacy.Keybindings next-tab '<Control>Page_Down'
+org.gnome.Terminal.Legacy.Keybindings move-tab-left '<Primary>comma'
+org.gnome.Terminal.Legacy.Keybindings move-tab-right '<Primary>period'
+org.gnome.Terminal.Legacy.Keybindings new-tab '<Primary>t'
+org.gnome.Terminal.Legacy.Keybindings new-window '<Primary>n'
+org.gnome.Terminal.Legacy.Keybindings next-tab '<Primary>k'
 org.gnome.Terminal.Legacy.Keybindings paste '<Control><Shift>v'
 org.gnome.Terminal.Legacy.Keybindings preferences 'disabled'
-org.gnome.Terminal.Legacy.Keybindings prev-tab '<Control>Page_Up'
+org.gnome.Terminal.Legacy.Keybindings prev-tab '<Primary>j'
 org.gnome.Terminal.Legacy.Keybindings print 'disabled'
 org.gnome.Terminal.Legacy.Keybindings read-only 'disabled'
 org.gnome.Terminal.Legacy.Keybindings reset 'disabled'
@@ -1201,7 +1201,7 @@ org.gnome.shell disable-extension-version-validation false
 org.gnome.shell disable-user-extensions false
 org.gnome.shell disabled-extensions @as []
 org.gnome.shell enabled-extensions @as []
-org.gnome.shell favorite-apps ['org.gnome.Terminal.desktop', 'code.desktop', 'slack.desktop', 'google-chrome.desktop', 'org.gnome.Nautilus.desktop', 'org.gnome.gedit.desktop']
+org.gnome.shell favorite-apps ['org.gnome.Terminal.desktop', 'code.desktop', 'google-chrome.desktop', 'slack.desktop', 'org.gnome.Nautilus.desktop', 'org.gnome.gedit.desktop']
 org.gnome.shell had-bluetooth-devices-setup true
 org.gnome.shell looking-glass-history @as []
 org.gnome.shell remember-mount-password false
@@ -1385,8 +1385,8 @@ org.gnome.system.proxy.socks port 0
 org.gnome.system.smb workgroup ''
 org.gnome.yelp font-adjustment 0
 org.gnome.yelp show-cursor false
-org.gtk.Settings.ColorChooser custom-colors [(0.16470588235294115, 0.63137254901960804, 0.70196078431372544, 1.0), (0.16470588235294117, 0.63137254901960782, 0.70196078431372544, 1.0)]
-org.gtk.Settings.ColorChooser selected-color (true, 0.16470588235294115, 0.63137254901960804, 0.70196078431372544, 1.0)
+org.gtk.Settings.ColorChooser custom-colors [(0.95592307692307699, 0.9537000000000001, 0.96333333333333337, 1.0), (0.090196078431372562, 0.078431372549019607, 0.12941176470588237, 1.0), (0.090196078431372548, 0.078431372549019607, 0.12941176470588237, 1.0), (0.16470588235294115, 0.63137254901960804, 0.70196078431372544, 1.0), (0.16470588235294117, 0.63137254901960782, 0.70196078431372544, 1.0)]
+org.gtk.Settings.ColorChooser selected-color (true, 0.0, 0.0, 0.0, 1.0)
 org.gtk.Settings.Debug enable-inspector-keybinding false
 org.gtk.Settings.Debug inspector-warning true
 org.gtk.Settings.EmojiChooser recent-emoji @a((auss)u) []
