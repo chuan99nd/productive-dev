@@ -150,7 +150,7 @@ org.gnome.Cheese selected-effect 'identity'
 org.gnome.Cheese video-path ''
 org.gnome.Cheese video-x-resolution 0
 org.gnome.Cheese video-y-resolution 0
-org.gnome.ControlCenter last-panel 'bluetooth'
+org.gnome.ControlCenter last-panel 'wifi'
 org.gnome.ControlCenter show-development-warning true
 org.gnome.Disks image-dir-uri ''
 org.gnome.Disks.benchmark do-write true
@@ -414,7 +414,7 @@ org.gnome.desktop.default-applications.office.tasks needs-term false
 org.gnome.desktop.default-applications.terminal exec 'x-terminal-emulator'
 org.gnome.desktop.default-applications.terminal exec-arg '-e'
 org.gnome.desktop.input-sources current uint32 0
-org.gnome.desktop.input-sources mru-sources [('xkb', 'us'), ('ibus', 'Bamboo')]
+org.gnome.desktop.input-sources mru-sources [('ibus', 'Bamboo'), ('xkb', 'us')]
 org.gnome.desktop.input-sources per-window false
 org.gnome.desktop.input-sources show-all-sources false
 org.gnome.desktop.input-sources sources [('xkb', 'us'), ('ibus', 'Bamboo')]
@@ -480,7 +480,7 @@ org.gnome.desktop.media-handling autorun-x-content-ignore @as []
 org.gnome.desktop.media-handling autorun-x-content-open-folder @as []
 org.gnome.desktop.media-handling autorun-x-content-start-app ['x-content/unix-software', 'x-content/ostree-repository']
 org.gnome.desktop.notifications application-children ['gnome-power-panel', 'code', 'slack', 'gnome-network-panel', 'org-gnome-evolution-alarm-notify', 'microsoft-edge', 'gnome-control-center', 'org-gnome-nautilus', 'snap-store-ubuntu-software', 'libreoffice-writer', 'org-gnome-evince', 'libreoffice-calc', 'org-gnome-gedit', 'postman-postman', 'libreoffice-startcenter', 'io-snapcraft-sessionagent', 'virtualboxvm', 'apport-gtk', 'virtualbox', 'mysql-workbench', 'google-chrome', 'update-manager', 'kitty', 'dbeaver-ce']
-org.gnome.desktop.notifications show-banners false
+org.gnome.desktop.notifications show-banners true
 org.gnome.desktop.notifications show-in-lock-screen false
 org.gnome.desktop.peripherals.tablet area [0.0, 0.0, 0.0, 0.0]
 org.gnome.desktop.peripherals.tablet keep-aspect false
@@ -577,7 +577,7 @@ org.gnome.desktop.wm.keybindings activate-window-menu ['<Alt>space']
 org.gnome.desktop.wm.keybindings always-on-top @as []
 org.gnome.desktop.wm.keybindings begin-move ['<Alt>F7']
 org.gnome.desktop.wm.keybindings begin-resize ['<Alt>F8']
-org.gnome.desktop.wm.keybindings close ['<Primary>q']
+org.gnome.desktop.wm.keybindings close ['<Super>q']
 org.gnome.desktop.wm.keybindings cycle-group ['<Super>Tab']
 org.gnome.desktop.wm.keybindings cycle-group-backward ['<Shift><Super>Tab']
 org.gnome.desktop.wm.keybindings cycle-panels ['<Control><Alt>Escape']
@@ -817,18 +817,18 @@ org.gnome.gedit.state.window bottom-panel-active-page ''
 org.gnome.gedit.state.window bottom-panel-size 140
 org.gnome.gedit.state.window side-panel-active-page 'GeditWindowDocumentsPanel'
 org.gnome.gedit.state.window side-panel-size 200
-org.gnome.gedit.state.window size (1856, 1033)
-org.gnome.gedit.state.window state 43908
+org.gnome.gedit.state.window size (960, 1006)
+org.gnome.gedit.state.window state 76544
 org.gnome.gnome-system-monitor cpu-colors [(uint32 0, '#e6194B'), (1, '#f58231'), (2, '#ffe119'), (3, '#bfef45'), (4, '#3cb44b'), (5, '#42d4f4'), (6, '#4363d8'), (7, '#911eb4'), (8, '#f032e6'), (9, '#fabebe'), (10, '#ffd8b1'), (11, '#fffac8'), (12, '#aaffc3'), (13, '#469990'), (14, '#000075'), (15, '#e6beff')]
 org.gnome.gnome-system-monitor cpu-smooth-graph true
 org.gnome.gnome-system-monitor cpu-stacked-area-chart false
-org.gnome.gnome-system-monitor current-tab 'resources'
+org.gnome.gnome-system-monitor current-tab 'processes'
 org.gnome.gnome-system-monitor disks-interval 5000
 org.gnome.gnome-system-monitor graph-data-points 60
 org.gnome.gnome-system-monitor graph-update-interval 100
 org.gnome.gnome-system-monitor kill-dialog true
 org.gnome.gnome-system-monitor logarithmic-scale false
-org.gnome.gnome-system-monitor maximized true
+org.gnome.gnome-system-monitor maximized false
 org.gnome.gnome-system-monitor mem-color '#AB1852'
 org.gnome.gnome-system-monitor net-in-color '#2D7DB3'
 org.gnome.gnome-system-monitor net-out-color '#EE1D00'
@@ -844,7 +844,7 @@ org.gnome.gnome-system-monitor smooth-refresh true
 org.gnome.gnome-system-monitor solaris-mode true
 org.gnome.gnome-system-monitor swap-color '#49A835'
 org.gnome.gnome-system-monitor update-interval 3000
-org.gnome.gnome-system-monitor window-state (1856, 1053, 0, 0)
+org.gnome.gnome-system-monitor window-state (1096, 637, 26, 23)
 org.gnome.gnome-system-monitor.disktreenew col-0-visible true
 org.gnome.gnome-system-monitor.disktreenew col-0-width 100
 org.gnome.gnome-system-monitor.disktreenew col-1-visible true
@@ -1201,7 +1201,7 @@ org.gnome.shell disable-extension-version-validation false
 org.gnome.shell disable-user-extensions false
 org.gnome.shell disabled-extensions @as []
 org.gnome.shell enabled-extensions @as []
-org.gnome.shell favorite-apps ['gnome-terminal-fullscreen.desktop', 'code.desktop', 'google-chrome.desktop', 'slack.desktop', 'org.gnome.Nautilus.desktop', 'org.gnome.gedit.desktop']
+org.gnome.shell favorite-apps ['gnome-terminal-fullscreen.desktop', 'code.desktop', 'slack.desktop', 'google-chrome.desktop', 'org.gnome.Nautilus.desktop', 'org.gnome.gedit.desktop']
 org.gnome.shell had-bluetooth-devices-setup true
 org.gnome.shell looking-glass-history @as []
 org.gnome.shell remember-mount-password false
