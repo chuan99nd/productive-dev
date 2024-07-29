@@ -414,7 +414,7 @@ org.gnome.desktop.default-applications.office.tasks needs-term false
 org.gnome.desktop.default-applications.terminal exec 'x-terminal-emulator'
 org.gnome.desktop.default-applications.terminal exec-arg '-e'
 org.gnome.desktop.input-sources current uint32 0
-org.gnome.desktop.input-sources mru-sources [('xkb', 'us'), ('ibus', 'Bamboo')]
+org.gnome.desktop.input-sources mru-sources [('ibus', 'Bamboo'), ('xkb', 'us')]
 org.gnome.desktop.input-sources per-window false
 org.gnome.desktop.input-sources show-all-sources false
 org.gnome.desktop.input-sources sources [('xkb', 'us'), ('ibus', 'Bamboo')]
@@ -480,7 +480,7 @@ org.gnome.desktop.media-handling autorun-x-content-ignore @as []
 org.gnome.desktop.media-handling autorun-x-content-open-folder @as []
 org.gnome.desktop.media-handling autorun-x-content-start-app ['x-content/unix-software', 'x-content/ostree-repository']
 org.gnome.desktop.notifications application-children ['gnome-power-panel', 'code', 'slack', 'gnome-network-panel', 'org-gnome-evolution-alarm-notify', 'microsoft-edge', 'gnome-control-center', 'org-gnome-nautilus', 'snap-store-ubuntu-software', 'libreoffice-writer', 'org-gnome-evince', 'libreoffice-calc', 'org-gnome-gedit', 'postman-postman', 'libreoffice-startcenter', 'io-snapcraft-sessionagent', 'virtualboxvm', 'apport-gtk', 'virtualbox', 'mysql-workbench', 'google-chrome', 'update-manager', 'kitty', 'dbeaver-ce']
-org.gnome.desktop.notifications show-banners true
+org.gnome.desktop.notifications show-banners false
 org.gnome.desktop.notifications show-in-lock-screen false
 org.gnome.desktop.peripherals.tablet area [0.0, 0.0, 0.0, 0.0]
 org.gnome.desktop.peripherals.tablet keep-aspect false
@@ -496,7 +496,7 @@ org.gnome.desktop.peripherals.keyboard repeat-interval uint32 30
 org.gnome.desktop.peripherals.mouse accel-profile 'default'
 org.gnome.desktop.peripherals.mouse double-click 400
 org.gnome.desktop.peripherals.mouse drag-threshold 8
-org.gnome.desktop.peripherals.mouse left-handed true
+org.gnome.desktop.peripherals.mouse left-handed false
 org.gnome.desktop.peripherals.mouse middle-click-emulation false
 org.gnome.desktop.peripherals.mouse natural-scroll false
 org.gnome.desktop.peripherals.mouse speed 0.0
