@@ -150,7 +150,7 @@ org.gnome.Cheese selected-effect 'identity'
 org.gnome.Cheese video-path ''
 org.gnome.Cheese video-x-resolution 0
 org.gnome.Cheese video-y-resolution 0
-org.gnome.ControlCenter last-panel 'keyboard'
+org.gnome.ControlCenter last-panel 'bluetooth'
 org.gnome.ControlCenter show-development-warning true
 org.gnome.Disks image-dir-uri ''
 org.gnome.Disks.benchmark do-write true
@@ -414,7 +414,7 @@ org.gnome.desktop.default-applications.office.tasks needs-term false
 org.gnome.desktop.default-applications.terminal exec 'x-terminal-emulator'
 org.gnome.desktop.default-applications.terminal exec-arg '-e'
 org.gnome.desktop.input-sources current uint32 0
-org.gnome.desktop.input-sources mru-sources [('ibus', 'Bamboo'), ('xkb', 'us')]
+org.gnome.desktop.input-sources mru-sources [('xkb', 'us'), ('ibus', 'Bamboo')]
 org.gnome.desktop.input-sources per-window false
 org.gnome.desktop.input-sources show-all-sources false
 org.gnome.desktop.input-sources sources [('xkb', 'us'), ('ibus', 'Bamboo')]
@@ -1264,10 +1264,10 @@ org.gnome.shell.extensions.dash-to-dock custom-theme-running-dots-border-width 0
 org.gnome.shell.extensions.dash-to-dock custom-theme-running-dots-color '#ffffff'
 org.gnome.shell.extensions.dash-to-dock custom-theme-shrink false
 org.gnome.shell.extensions.dash-to-dock customize-alphas false
-org.gnome.shell.extensions.dash-to-dock dash-max-icon-size 42
+org.gnome.shell.extensions.dash-to-dock dash-max-icon-size 48
 org.gnome.shell.extensions.dash-to-dock disable-overview-on-startup false
 org.gnome.shell.extensions.dash-to-dock dock-fixed false
-org.gnome.shell.extensions.dash-to-dock dock-position 'RIGHT'
+org.gnome.shell.extensions.dash-to-dock dock-position 'BOTTOM'
 org.gnome.shell.extensions.dash-to-dock extend-height false
 org.gnome.shell.extensions.dash-to-dock force-straight-corner false
 org.gnome.shell.extensions.dash-to-dock height-fraction 0.90000000000000002
