@@ -150,7 +150,7 @@ org.gnome.Cheese selected-effect 'identity'
 org.gnome.Cheese video-path ''
 org.gnome.Cheese video-x-resolution 0
 org.gnome.Cheese video-y-resolution 0
-org.gnome.ControlCenter last-panel 'wifi'
+org.gnome.ControlCenter last-panel 'keyboard'
 org.gnome.ControlCenter show-development-warning true
 org.gnome.Disks image-dir-uri ''
 org.gnome.Disks.benchmark do-write true
@@ -414,7 +414,7 @@ org.gnome.desktop.default-applications.office.tasks needs-term false
 org.gnome.desktop.default-applications.terminal exec 'x-terminal-emulator'
 org.gnome.desktop.default-applications.terminal exec-arg '-e'
 org.gnome.desktop.input-sources current uint32 0
-org.gnome.desktop.input-sources mru-sources [('ibus', 'Bamboo'), ('xkb', 'us')]
+org.gnome.desktop.input-sources mru-sources [('xkb', 'us'), ('ibus', 'Bamboo')]
 org.gnome.desktop.input-sources per-window false
 org.gnome.desktop.input-sources show-all-sources false
 org.gnome.desktop.input-sources sources [('xkb', 'us'), ('ibus', 'Bamboo')]
@@ -959,14 +959,14 @@ org.gnome.mutter auto-maximize true
 org.gnome.mutter center-new-windows false
 org.gnome.mutter check-alive-timeout uint32 5000
 org.gnome.mutter draggable-border-width 10
-org.gnome.mutter dynamic-workspaces false
+org.gnome.mutter dynamic-workspaces true
 org.gnome.mutter edge-tiling false
 org.gnome.mutter experimental-features @as []
 org.gnome.mutter focus-change-on-pointer-rest false
 org.gnome.mutter locate-pointer-key 'Control_L'
 org.gnome.mutter no-tab-popup false
 org.gnome.mutter overlay-key 'Super_L'
-org.gnome.mutter workspaces-only-on-primary false
+org.gnome.mutter workspaces-only-on-primary true
 org.gnome.mutter.keybindings rotate-monitor ['XF86RotateWindows']
 org.gnome.mutter.keybindings switch-monitor ['<Super>p', 'XF86Display']
 org.gnome.mutter.keybindings tab-popup-cancel @as []
@@ -1000,7 +1000,7 @@ org.gnome.nautilus.list-view default-zoom-level 'standard'
 org.gnome.nautilus.list-view use-tree-view false
 org.gnome.nautilus.preferences always-use-location-entry false
 org.gnome.nautilus.preferences click-policy 'double'
-org.gnome.nautilus.preferences default-folder-viewer 'icon-view'
+org.gnome.nautilus.preferences default-folder-viewer 'list-view'
 org.gnome.nautilus.preferences default-sort-in-reverse-order false
 org.gnome.nautilus.preferences default-sort-order 'name'
 org.gnome.nautilus.preferences fts-enabled true
@@ -1178,7 +1178,7 @@ org.gnome.settings-daemon.plugins.media-keys volume-up-static ['XF86AudioRaiseVo
 org.gnome.settings-daemon.plugins.media-keys www ['']
 org.gnome.settings-daemon.plugins.media-keys www-static ['XF86WWW']
 org.gnome.settings-daemon.plugins.power ambient-enabled true
-org.gnome.settings-daemon.plugins.power idle-brightness 30
+org.gnome.settings-daemon.plugins.power idle-brightness 0
 org.gnome.settings-daemon.plugins.power idle-dim false
 org.gnome.settings-daemon.plugins.power lid-close-ac-action 'suspend'
 org.gnome.settings-daemon.plugins.power lid-close-battery-action 'suspend'
@@ -1199,14 +1199,14 @@ org.gnome.shell command-history ['zsh', 'asfd']
 org.gnome.shell development-tools true
 org.gnome.shell disable-extension-version-validation false
 org.gnome.shell disable-user-extensions false
-org.gnome.shell disabled-extensions @as []
+org.gnome.shell disabled-extensions ['ubuntu-dock@ubuntu.com', 'ding@rastersoft.com', 'ubuntu-appindicators@ubuntu.com']
 org.gnome.shell enabled-extensions @as []
-org.gnome.shell favorite-apps ['gnome-terminal-fullscreen.desktop', 'code.desktop', 'slack.desktop', 'google-chrome.desktop', 'org.gnome.Nautilus.desktop', 'org.gnome.gedit.desktop']
+org.gnome.shell favorite-apps ['org.gnome.Terminal.desktop', 'code.desktop', 'slack.desktop', 'google-chrome.desktop', 'org.gnome.Nautilus.desktop', 'org.gnome.gedit.desktop']
 org.gnome.shell had-bluetooth-devices-setup true
 org.gnome.shell looking-glass-history @as []
 org.gnome.shell remember-mount-password false
 org.gnome.shell welcome-dialog-last-shown-version '42.9'
-org.gnome.shell.app-switcher current-workspace-only false
+org.gnome.shell.app-switcher current-workspace-only true
 org.gnome.shell.extensions.appindicator custom-icons @a(sss) []
 org.gnome.shell.extensions.appindicator icon-brightness 0.0
 org.gnome.shell.extensions.appindicator icon-contrast 0.0
@@ -1216,6 +1216,8 @@ org.gnome.shell.extensions.appindicator icon-size 0
 org.gnome.shell.extensions.appindicator icon-spacing 12
 org.gnome.shell.extensions.appindicator tray-order 1
 org.gnome.shell.extensions.appindicator tray-pos 'right'
+org.gnome.shell.extensions.apps-menu apps-menu-toggle-menu ['<Alt>F1']
+org.gnome.shell.extensions.auto-move-windows application-list @as []
 org.gnome.shell.extensions.dash-to-dock activate-single-window true
 org.gnome.shell.extensions.dash-to-dock animate-show-apps true
 org.gnome.shell.extensions.dash-to-dock animation-time 0.20000000000000001
@@ -1280,7 +1282,7 @@ org.gnome.shell.extensions.dash-to-dock intellihide true
 org.gnome.shell.extensions.dash-to-dock intellihide-mode 'FOCUS_APPLICATION_WINDOWS'
 org.gnome.shell.extensions.dash-to-dock isolate-locations true
 org.gnome.shell.extensions.dash-to-dock isolate-monitors false
-org.gnome.shell.extensions.dash-to-dock isolate-workspaces false
+org.gnome.shell.extensions.dash-to-dock isolate-workspaces true
 org.gnome.shell.extensions.dash-to-dock max-alpha 0.80000000000000004
 org.gnome.shell.extensions.dash-to-dock middle-click-action 'launch'
 org.gnome.shell.extensions.dash-to-dock min-alpha 0.20000000000000001
@@ -1330,6 +1332,14 @@ org.gnome.shell.extensions.ding sort-special-folders false
 org.gnome.shell.extensions.ding start-corner 'top-left'
 org.gnome.shell.extensions.ding unstackedtypes @as []
 org.gnome.shell.extensions.ding use-nemo false
+org.gnome.shell.extensions.native-window-placement use-more-screen true
+org.gnome.shell.extensions.native-window-placement window-captions-on-top true
+org.gnome.shell.extensions.screenshot-window-sizer cycle-screenshot-sizes ['<Alt><Control>s']
+org.gnome.shell.extensions.screenshot-window-sizer cycle-screenshot-sizes-backward ['<Shift><Alt><Control>s']
+org.gnome.shell.extensions.user-theme name ''
+org.gnome.shell.extensions.window-list display-all-workspaces false
+org.gnome.shell.extensions.window-list grouping-mode 'never'
+org.gnome.shell.extensions.window-list show-on-all-monitors false
 org.gnome.shell.keybindings focus-active-notification ['<Super>n']
 org.gnome.shell.keybindings open-application-menu ['<Super>F10']
 org.gnome.shell.keybindings screenshot ['<Shift>Print']
@@ -1395,7 +1405,7 @@ org.gtk.Settings.FileChooser date-format 'regular'
 org.gtk.Settings.FileChooser expand-folders false
 org.gtk.Settings.FileChooser last-folder-uri ''
 org.gtk.Settings.FileChooser location-mode 'path-bar'
-org.gtk.Settings.FileChooser show-hidden false
+org.gtk.Settings.FileChooser show-hidden true
 org.gtk.Settings.FileChooser show-size-column true
 org.gtk.Settings.FileChooser show-type-column true
 org.gtk.Settings.FileChooser sidebar-width 170
