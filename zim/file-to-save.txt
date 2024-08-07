@@ -1,0 +1,3 @@
+/home/gacute/.zim/modules/completion/init.zsh
+~/.zimrc
+zimfw install
