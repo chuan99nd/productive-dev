@@ -5,4 +5,3 @@ sudo apt-get install python3-pip
 
 # Some awesome tmux
 # https://github.com/rothgar/awesome-tmux?tab=readme-ov-file 
-
