@@ -1,1 +1,4 @@
 gsettings set org.gnome.desktop.input-sources xkb-options "['caps:escape']"
+
+# Set up Alt + Back to delete the entire word
+stty werase \^H
