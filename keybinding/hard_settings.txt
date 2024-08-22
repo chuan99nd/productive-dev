@@ -1,4 +1,23 @@
-gsettings set org.gnome.desktop.input-sources xkb-options "['caps:escape']"
+# This command make the delay when pushing caplock is very low
+# gsettings set org.gnome.desktop.input-sources xkb-options "['caps:escape']"
+
+# To mapping Capslock to Esc, follow this guide: https://wiki.debian.org/Keyboard
+# Set up file /etc/default/keyboard 
+
+sudo cat << EOF > /etc/default/keyboard.txt
+# KEYBOARD CONFIGURATION FILE
+# Consult the keyboard(5) manual page.
+
+XKBMODEL="pc105"
+XKBLAYOUT="us"
+XKBVARIANT=""
+XKBOPTIONS="caps:escape"
+
+BACKSPACE="guess"
+EOF
+
+dpkg-reconfigure keyboard-configuration
+service keyboard-setup restart
 
 # Set up Alt + Back to delete the entire word
 stty werase \^H
