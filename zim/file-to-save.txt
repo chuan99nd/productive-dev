@@ -1,3 +1,5 @@
 /home/gacute/.zim/modules/completion/init.zsh
 ~/.zimrc
+~/.p10k.zsh
+~/.profile
 zimfw install
