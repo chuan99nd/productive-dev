@@ -7,6 +7,7 @@ local lspconfig = require "lspconfig"
 local servers = { "html", "cssls" }
 local nvlsp = require "nvchad.configs.lspconfig"
 
+vim.opt.timeoutlen = 10
 -- lsps with default config
 for _, lsp in ipairs(servers) do
   lspconfig[lsp].setup {
