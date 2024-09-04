@@ -29,3 +29,7 @@ nvm install 20
 node -v # should print `v20.16.0`
 # verifies the right npm version is in the environment
 npm -v # should print `10.8.1`
+
+# Install pyright server for LSP plugin (python auto complete)
+
+pipx install pyright

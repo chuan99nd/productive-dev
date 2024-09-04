@@ -1,0 +1,20 @@
+# BEGIN_KITTY_THEME
+# Alabaster
+include current-theme.conf
+# END_KITTY_THEME
+
+
+# Tabar
+tab_bar_edge top
+tab_bar_style slant
+
+# Backgroud
+background_opacity 1
+# background #171421
+# foreground #D0CFCC
+
+map ctrl+alt+t new_tab
+map ctrl+alt+w close_tab
+map ctrl+alt+j previous_tab
+map ctrl+alt+k next_tab
+
