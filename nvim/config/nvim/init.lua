@@ -28,6 +28,18 @@ require("lazy").setup({
   { import = "plugins" },
 }, lazy_config)
 
+vim.api.nvim_create_autocmd('ColorScheme', {
+          pattern = 'solarized',
+          -- group = ...,
+          callback = function()
+            vim.api.nvim_set_hl(0, 'CopilotSuggestion', {
+              fg = '#555555',
+              ctermfg = 8,
+              force = true
+            })
+          end
+        })
+
 -- load theme
 dofile(vim.g.base46_cache .. "defaults")
 dofile(vim.g.base46_cache .. "statusline")
