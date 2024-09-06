@@ -19,6 +19,32 @@ function ghq-list-then-look
   fi
 }
 
+function git_repo
+{ 
+  local selected="none"
+  # Check pwd is in git repo
+  if git rev-parse --is-inside-work-tree &> /dev/null; then
+    selected=$(pwd) 
+  else
+    selected=$(ghq list -p \
+      | fzf --height 90% --preview='find {} -depth 1 -type f | grep -i -e "readme.[(md)|(mkd)|(markdown)]" | head -1 | xargs head -$LINES')
+
+   
+  fi
+
+  # Open git link
+ if [ -n "${selected}" ]; then
+    # Get the current SSH URL
+    ssh_url=$(git -C ${selected} remote get-url origin)
+
+    # Convert SSH URL to HTTPS URL
+    https_url=$(echo "$ssh_url" | sed -e 's/ssh:\/\/git@/https:\/\//' -e 's/\.git/\.git/')
+
+    # Print the HTTPS URL
+    xdg-open "$https_url"
+  fi
+}
+
 function k9s-list-context
 { 
   clear

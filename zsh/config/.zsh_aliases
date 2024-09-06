@@ -7,5 +7,6 @@ alias c="clear"
 alias t="tmux"
 alias h="cd $H"
 alias v="nvim"
+alias gr="git_repo"
 # end-custom
 
