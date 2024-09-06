@@ -1,0 +1,11 @@
+# begin-custom
+alias k="kubectl"
+alias g=ghq-list-then-look
+alias kc="k ctx"
+alias ks="k9s-list-context"
+alias c="clear"
+alias t="tmux"
+alias h="cd $H"
+alias v="nvim"
+# end-custom
+

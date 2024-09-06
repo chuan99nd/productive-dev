@@ -1,0 +1,53 @@
+function ghq-list-then-look
+{ 
+  clear
+  local selected=$(ghq list -p \
+    | fzf --height 90% --preview='find {} -depth 1 -type f | grep -i -e "readme.[(md)|(mkd)|(markdown)]" | head -1 | xargs head -$LINES')
+
+  if [ -n "${selected}" ]; then
+    clear
+    export H="${selected}"
+    export TAB_TITLE=$(basename $H)
+    cd "${selected}"
+    # Remove prefix
+    local prefix="${HOME}/ghq"
+    local sessionName=${selected#${prefix}/}
+     if ! [ -n "${TMUX}" ]; then
+      tmux new-session -A -s "${sessionName}"
+     fi
+    # nvim "${sessionName}"
+  fi
+}
+
+function k9s-list-context
+{ 
+  clear
+  local selected=$(kubectl config get-contexts -o name\
+    | fzf --height 50%  | head -1 )
+
+  if [ -n "${selected}" ]; then
+    clear
+    k9s --context ${selected}
+  fi
+}
+
+function cleanup_tmux_session
+{
+  IFS=$'\n'  sessions=($(tmux list-sessions -F "#S"))
+  for session in $sessions; do
+  tmux kill-session -t "$session"
+  done
+}
+
+function set_terminal_title() {
+  echo -en "\e]2;$@\a"
+}
+
+function vscode_shortcut_to_current_folder() {
+  # h is variable for current git folder 
+  code ${h:-.}
+}
+
+function set_terminal_title() {
+  echo -en "\e]2;$@\a"
+}
