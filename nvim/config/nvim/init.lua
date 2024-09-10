@@ -1,6 +1,6 @@
 vim.g.base46_cache = vim.fn.stdpath "data" .. "/nvchad/base46/"
 vim.g.mapleader = " "
- vim.wo.relativenumber = true
+vim.wo.relativenumber = true
 
 -- bootstrap lazy and all plugins
 local lazypath = vim.fn.stdpath "data" .. "/lazy/lazy.nvim"
@@ -38,9 +38,7 @@ vim.api.nvim_create_autocmd('ColorScheme', {
               force = true
             })
           end
-        })
-
--- load theme
+        })-- load theme
 dofile(vim.g.base46_cache .. "defaults")
 dofile(vim.g.base46_cache .. "statusline")
 

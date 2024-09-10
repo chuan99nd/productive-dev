@@ -22,3 +22,4 @@ service keyboard-setup restart
 # Set up Alt + Back to delete the entire word
 # Alt + D to delete the word after the cursor
 stty werase \^H
+bindkey '\e[3;3~' kill-word
