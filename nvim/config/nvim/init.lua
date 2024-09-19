@@ -47,3 +47,40 @@ require "nvchad.autocmds"
 vim.schedule(function()
   require "mappings"
 end)
+
+local actions = require('telescope.actions')
+local action_state = require('telescope.actions.state')
+require('telescope').setup{
+  defaults = {
+    mappings = {
+      i = {
+        -- Send results to quickfix list and close Telescope
+        ["<C-q>"] = actions.send_to_qflist + actions.open_qflist,
+        -- You can use this mapping in normal mode as well
+      },
+      n = {
+        ["<C-q>"] = actions.send_to_qflist + actions.open_qflist,
+      }
+    },
+    file_ignore_patterns = {"node_modules", ".git"}
+  }
+}
+
+---------------------------------------------------
+--- Telescope config
+-- Function to jump to the selected quickfix entry
+function jump_to_quickfix_entry()
+  local qflist = vim.fn.getqflist()  -- Get the quickfix list
+    if #qflist > 0 then
+        vim.cmd('cc ' .. vim.fn.line('.'))  -- Jump to the line using :cc
+    end
+  end
+
+-- Set the mapping for the quickfix window
+vim.api.nvim_create_autocmd("FileType", {
+  pattern = "qf",
+    callback = function()
+        vim.api.nvim_buf_set_keymap(0, 'n', '<CR>', ':lua jump_to_quickfix_entry()<CR>', { noremap = true, silent = true })
+          end,
+          }) 
+

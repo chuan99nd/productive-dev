@@ -1,1 +1,1 @@
-cp -r ~/.config/kitty kitty/config
+cp -r ~/.config/kitty ./config

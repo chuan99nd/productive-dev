@@ -36,3 +36,8 @@ vim.api.nvim_set_keymap('n', 'r', '<C-r>', { noremap = true, silent = true })
 map("n", "<A-CR>", "<cmd>Telescope lsp_definitions<cr>")
 map("n", "<leader>fr", "<cmd>Telescope lsp_references<cr>")
 map("n", "<C-m>", "<cmd>lua vim.lsp.buf.hover()<cr>")
+
+-- Telescope search
+vim.api.nvim_set_keymap('n', '#', ":lua require('telescope.builtin').grep_string()<CR>", { noremap = true, silent = true })
+-- autocmd FileType qf nnoremap <buffer> <CR> <CR>
+
