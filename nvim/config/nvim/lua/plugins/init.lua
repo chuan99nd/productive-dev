@@ -8,7 +8,7 @@ return {
   -- These are some examples, uncomment them if you want to see them work!
   {
     "neovim/nvim-lspconfig",
-   config = function()
+    config = function()
       require "configs.lspconfig"
     end,
   },
@@ -40,12 +40,12 @@ return {
     -- If you want to load the plugin at startup, add something like event = "VeryLazy",
     -- or lazy = false. One of both options will work.
     opts = {
-        -- your configuration comes here
-        -- for example
-        enabled = true,  -- if you want to enable the plugin
-        message_template = " <date> • <author> • <summary> • <<sha>>", -- template for the blame message, check the Message template section for more options
-        date_format = "%r", -- template for the date, check Date format section for more options
-        virtual_text_column = 1,  -- virtual text start column, check Start virtual text at column section for more options
+      -- your configuration comes here
+      -- for example
+      enabled = true, -- if you want to enable the plugin
+      message_template = " <date> • <author> • <summary> • <<sha>>", -- template for the blame message, check the Message template section for more options
+      date_format = "%r", -- template for the date, check Date format section for more options
+      virtual_text_column = 1, -- virtual text start column, check Start virtual text at column section for more options
     },
   },
   {
@@ -54,5 +54,15 @@ return {
       "Copilot",
     },
     enable = "true",
+  },
+  -- install with yarn or npm
+  {
+    "iamcco/markdown-preview.nvim",
+    cmd = { "MarkdownPreviewToggle", "MarkdownPreview", "MarkdownPreviewStop" },
+    build = "cd app && yarn install",
+    init = function()
+      vim.g.mkdp_filetypes = { "markdown" }
+    end,
+    ft = { "markdown" },
   },
 }

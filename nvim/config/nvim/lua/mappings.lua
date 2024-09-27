@@ -6,7 +6,7 @@ local map = vim.keymap.set
 
 map("n", ";", ":", { desc = "CMD enter command mode" })
 map("n", "<leader>|", "<cmd> vsplit <cr>")
-map({"i", "n"}, "<C-s>", "<cmd> wa <cr><ESC>")
+map({ "i", "n" }, "<C-s>", "<cmd> wa <cr><ESC>")
 
 -------------------
 -- emac key binding
@@ -14,7 +14,7 @@ map({"i", "n"}, "<C-s>", "<cmd> wa <cr><ESC>")
 -- Map w to the last character of word
 vim.api.nvim_set_keymap('x', 'w', 'e', { noremap = true, silent = true })
 -- In insert mode, map Alt + Delete to delete the previous word
-vim.api.nvim_set_keymap('n', '<A-BS>', 'db', { noremap = true, silent = true }) 
+vim.api.nvim_set_keymap('n', '<A-BS>', 'db', { noremap = true, silent = true })
 vim.api.nvim_set_keymap('i', '<A-BS>', '<C-w>', { noremap = true, silent = true })
 
 --In insert mode, map Alt + Delete to delete the word after the cursor
@@ -38,6 +38,6 @@ map("n", "<leader>fr", "<cmd>Telescope lsp_references<cr>")
 map("n", "<C-m>", "<cmd>lua vim.lsp.buf.hover()<cr>")
 
 -- Telescope search
-vim.api.nvim_set_keymap('n', '#', ":lua require('telescope.builtin').grep_string()<CR>", { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '#', ":lua require('telescope.builtin').grep_string()<CR>",
+  { noremap = true, silent = true })
 -- autocmd FileType qf nnoremap <buffer> <CR> <CR>
-

@@ -29,6 +29,8 @@ function M.setup()
   vim.api.nvim_set_keymap('n', '<A-w>', ':lua close_other_buffers()<CR>', { noremap = true, silent = true })
   -- Close tab the right
   vim.api.nvim_set_keymap('n', '<A-r>', ':lua close_buffers_to_the_right()<CR>', { noremap = true, silent = true })
+  -- Close current buffer
+  vim.api.nvim_set_keymap('n', '<A-x>', ':b#|bd#<CR>', { noremap = true, silent = true })
 end
 
 return M
