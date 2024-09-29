@@ -29,16 +29,16 @@ require("lazy").setup({
 }, lazy_config)
 
 vim.api.nvim_create_autocmd('ColorScheme', {
-          pattern = 'solarized',
-          -- group = ...,
-          callback = function()
-            vim.api.nvim_set_hl(0, 'CopilotSuggestion', {
-              fg = '#555555',
-              ctermfg = 8,
-              force = true
-            })
-          end
-        })-- load theme
+  pattern = 'solarized',
+  -- group = ...,
+  callback = function()
+    vim.api.nvim_set_hl(0, 'CopilotSuggestion', {
+      fg = '#555555',
+      ctermfg = 8,
+      force = true
+    })
+  end
+})         -- load theme
 dofile(vim.g.base46_cache .. "defaults")
 dofile(vim.g.base46_cache .. "statusline")
 
@@ -51,7 +51,7 @@ end)
 local actions = require('telescope.actions')
 local action_state = require('telescope.actions.state')
 
-require('telescope').setup{}
+require('telescope').setup {}
 require('configs.telescope').setup()
 require('configs.bufferhelper').setup()
-
+require('neoscroll').setup({ mappings = {} })
