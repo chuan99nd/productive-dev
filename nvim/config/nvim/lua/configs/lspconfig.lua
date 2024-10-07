@@ -72,3 +72,4 @@ cmp.setup({
   }
 })
 vim.api.nvim_set_keymap('n', '<C-m>', ':Copilot panel<CR>', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '<C-n>', ':Copilot setup<CR>', { noremap = true, silent = true })
