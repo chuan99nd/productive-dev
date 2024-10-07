@@ -47,9 +47,28 @@ vim.api.nvim_create_autocmd("LspAttach", {
       -- 3
       buffer = args.buf,
       callback = function()
-        -- 4 + 5
         vim.lsp.buf.format { async = false, id = args.data.client_id }
       end,
     })
   end
 })
+
+local cmp = require 'cmp'
+
+-- Use arrow to navigate in cmp menu, use tab to complete copilot's code
+cmp.setup({
+  sources = cmp.config.sources({
+    -- { name = 'copilot' },  -- Copilot suggestions
+    { name = 'nvim_lsp' }, -- LSP suggestions
+    { name = 'buffer' },   -- buffer suggestions
+  }),
+
+  mapping = {
+    ['<Up>'] = cmp.mapping.select_prev_item(),
+    ['<Down>'] = cmp.mapping.select_next_item(),
+    ['<Tab>'] = function(fallback)
+      fallback() -- Use this to fallback to regular tab functionality (e.g., indent)
+    end,
+  }
+})
+vim.api.nvim_set_keymap('n', '<C-m>', ':Copilot panel<CR>', { noremap = true, silent = true })
