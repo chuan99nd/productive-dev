@@ -41,3 +41,5 @@ map("n", "<C-m>", "<cmd>lua vim.lsp.buf.hover()<cr>")
 vim.api.nvim_set_keymap('n', '#', ":lua require('telescope.builtin').grep_string()<CR>",
   { noremap = true, silent = true })
 -- autocmd FileType qf nnoremap <buffer> <CR> <CR>
+vim.api.nvim_set_keymap('n', 'x', ':lua if not vim.bo.modifiable then vim.cmd("q") end<CR>',
+  { noremap = true, silent = true })
