@@ -43,3 +43,5 @@ vim.api.nvim_set_keymap('n', '#', ":lua require('telescope.builtin').grep_string
 -- autocmd FileType qf nnoremap <buffer> <CR> <CR>
 vim.api.nvim_set_keymap('n', 'x', ':lua if not vim.bo.modifiable then vim.cmd("q") end<CR>',
   { noremap = true, silent = true })
+vim.opt.shiftwidth = 4
+vim.opt.tabstop = 4
