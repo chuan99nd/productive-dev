@@ -35,13 +35,14 @@ vim.api.nvim_set_keymap('n', 'r', '<C-r>', { noremap = true, silent = true })
 -- LSP key map
 map("n", "<A-CR>", "<cmd>Telescope lsp_definitions<cr>")
 map("n", "<leader>fr", "<cmd>Telescope lsp_references<cr>")
-map("n", "<C-m>", "<cmd>lua vim.lsp.buf.hover()<cr>")
+map("n", "<leader>fd", "<cmd>lua vim.diagnostic.setloclist()<cr>")
+map("n", "<C-M>", "<cmd>lua vim.lsp.buf.hover()<cr>")
 
 -- Telescope search
 vim.api.nvim_set_keymap('n', '#', ":lua require('telescope.builtin').grep_string()<CR>",
-  { noremap = true, silent = true })
+    { noremap = true, silent = true })
 -- autocmd FileType qf nnoremap <buffer> <CR> <CR>
 vim.api.nvim_set_keymap('n', 'x', ':lua if not vim.bo.modifiable then vim.cmd("q") end<CR>',
-  { noremap = true, silent = true })
+    { noremap = true, silent = true })
 vim.opt.shiftwidth = 4
 vim.opt.tabstop = 4
