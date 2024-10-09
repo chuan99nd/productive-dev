@@ -63,7 +63,8 @@ function M.setup()
     })
     -- Map '#' in visual mode to Telescope search
     vim.api.nvim_set_keymap('v', '#', ':lua SearchSelectedText()<CR>', { noremap = true, silent = true })
-    vim.api.nvim_set_keymap('n', '<leader>rf', '<cmd>lua vim.lsp.buf.rename()<CR>', { noremap = true, silent = true })
+    vim.api.nvim_set_keymap('n', '<leader>rf', '<cmd>:lua vim.lsp.buf.rename()<CR>', { noremap = true, silent = true })
+    vim.api.nvim_set_keymap('n', '<leader>fd', '<cmd>:lua search_diagnostics()<CR>', { noremap = true, silent = true })
 end
 
 return M

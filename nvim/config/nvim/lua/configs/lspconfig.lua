@@ -36,6 +36,18 @@ lspconfig.gopls.setup({
             gofumpt = true,
         },
     },
+    on_attach = function(client, bufnr)
+        -- Organize imports on save
+        vim.api.nvim_create_autocmd("BufWritePre", {
+            pattern = "*.go",
+            callback = function()
+                vim.lsp.buf.code_action({
+                    context = { only = { "source.organizeImports" } },
+                    apply = true
+                })
+            end,
+        })
+    end,
 })
 
 -- Format on save
@@ -48,10 +60,6 @@ vim.api.nvim_create_autocmd("LspAttach", {
             buffer = args.buf,
             callback = function()
                 vim.lsp.buf.format { async = false, id = args.data.client_id }
-                vim.lsp.buf.code_action({
-                    context = { only = { "source.organizeImports" } },
-                    apply = true
-                })
             end,
         })
     end
@@ -75,4 +83,3 @@ cmp.setup({
         end,
     }
 })
-vim.api.nvim_set_keymap('n', '<C-n>', ':Copilot setup<CR>', { noremap = true, silent = true })

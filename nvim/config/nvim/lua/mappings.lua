@@ -8,6 +8,8 @@ map("n", ";", ":", { desc = "CMD enter command mode" })
 map("n", "<leader>|", "<cmd> vsplit <cr>")
 map({ "i", "n" }, "<C-s>", "<cmd> wa <cr><ESC>")
 
+map({ 'n', 'i' }, '<C-n>', '<cmd>Copilot setup<cr>')
+map({ 'n', 'i' }, '<C-m>', '<cmd>Copilot panel<cr>')
 -------------------
 -- emac key binding
 -------------------
@@ -35,8 +37,7 @@ vim.api.nvim_set_keymap('n', 'r', '<C-r>', { noremap = true, silent = true })
 -- LSP key map
 map("n", "<A-CR>", "<cmd>Telescope lsp_definitions<cr>")
 map("n", "<leader>fr", "<cmd>Telescope lsp_references<cr>")
-map("n", "<leader>fd", "<cmd>lua vim.diagnostic.setloclist()<cr>")
-map("n", "<C-M>", "<cmd>lua vim.lsp.buf.hover()<cr>")
+map("n", "<C-P>", "<cmd>lua vim.lsp.buf.hover()<cr>")
 
 -- Telescope search
 vim.api.nvim_set_keymap('n', '#', ":lua require('telescope.builtin').grep_string()<CR>",
