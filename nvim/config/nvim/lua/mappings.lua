@@ -32,13 +32,19 @@ vim.api.nvim_set_keymap('n', '<Del>', 'x', { noremap = true, silent = true })
 vim.api.nvim_set_keymap('i', '<C-v>', '<C-r>+', { noremap = true, silent = true })
 
 -- Map r to redo
-vim.api.nvim_set_keymap('n', 'r', '<C-r>', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', 'R', '<C-r>', { noremap = true, silent = true })
+-- Unmap 'u' for undo
+vim.api.nvim_del_keymap('n', 'u')
+
+-- Map Shift+R (R) for undo
+vim.api.nvim_set_keymap('n', 'U', 'u', { noremap = true, silent = true })
+
 
 -- LSP key map
 map("n", "<A-CR>", "<cmd>Telescope lsp_definitions<cr>")
 map("n", "<leader>fr", "<cmd>Telescope lsp_references<cr>")
 map("n", "<C-P>", "<cmd>lua vim.lsp.buf.hover()<cr>")
-
+map('i', '<C-P>', '<Plug>(copilot-accept-word)')
 -- Telescope search
 vim.api.nvim_set_keymap('n', '#', ":lua require('telescope.builtin').grep_string()<CR>",
     { noremap = true, silent = true })

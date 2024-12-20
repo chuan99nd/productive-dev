@@ -5,7 +5,7 @@ local lspconfig = require "lspconfig"
 
 require 'lspconfig'.lua_ls.setup {}
 -- EXAMPLE
-local servers = { "html", "cssls", "pyright" }
+local servers = { "html", "cssls", "pyright", "tsserver" }
 local nvlsp = require "nvchad.configs.lspconfig"
 
 vim.opt.timeoutlen = 0
