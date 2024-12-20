@@ -33,12 +33,10 @@ vim.api.nvim_set_keymap('i', '<C-v>', '<C-r>+', { noremap = true, silent = true 
 
 -- Map r to redo
 vim.api.nvim_set_keymap('n', 'R', '<C-r>', { noremap = true, silent = true })
--- Unmap 'u' for undo
-vim.api.nvim_del_keymap('n', 'u')
 
 -- Map Shift+R (R) for undo
 vim.api.nvim_set_keymap('n', 'U', 'u', { noremap = true, silent = true })
-
+vim.api.nvim_set_keymap('n', 'u', '<Nop>', { noremap = true, silent = true })
 
 -- LSP key map
 map("n", "<A-CR>", "<cmd>Telescope lsp_definitions<cr>")
